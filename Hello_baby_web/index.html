@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Baby - La notice du bébé</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Navigation Bar (hidden on splash/accueil/login/register) -->
+  <nav id="navbar" class="navbar hidden">
+    <div class="navbar-inner">
+      <div class="navbar-brand" onclick="window.location.hash='#/forum'">
+        <i class="fas fa-baby"></i>
+        <span>Hello Baby</span>
+      </div>
+      <div class="navbar-links" id="nav-links">
+        <a href="#/forum" data-nav="forum"><i class="fas fa-comments"></i> Forum</a>
+        <a href="#/conseils" data-nav="conseils"><i class="fas fa-book"></i> Conseils</a>
+        <a href="#/assistant" data-nav="assistant"><i class="fas fa-lightbulb"></i> Assistant IA</a>
+        <a href="#/gamification" data-nav="gamification"><i class="fas fa-trophy"></i> Récompenses</a>
+        <a href="#/marketplace" data-nav="marketplace"><i class="fas fa-store"></i> Marketplace</a>
+        <a href="#/profile" data-nav="profile"><i class="fas fa-user"></i> Profil</a>
+      </div>
+      <button class="navbar-burger" id="burger-btn" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <a href="#/forum" onclick="closeMobileMenu()"><i class="fas fa-comments"></i> Forum</a>
+      <a href="#/conseils" onclick="closeMobileMenu()"><i class="fas fa-book"></i> Conseils</a>
+      <a href="#/assistant" onclick="closeMobileMenu()"><i class="fas fa-lightbulb"></i> Assistant IA</a>
+      <a href="#/gamification" onclick="closeMobileMenu()"><i class="fas fa-trophy"></i> Récompenses</a>
+      <a href="#/marketplace" onclick="closeMobileMenu()"><i class="fas fa-store"></i> Marketplace</a>
+      <a href="#/profile" onclick="closeMobileMenu()"><i class="fas fa-user"></i> Profil</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main id="app"></main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/pages/splash.js"></script>
+  <script src="js/pages/accueil.js"></script>
+  <script src="js/pages/login.js"></script>
+  <script src="js/pages/register.js"></script>
+  <script src="js/pages/forum.js"></script>
+  <script src="js/pages/post-detail.js"></script>
+  <script src="js/pages/new-thread.js"></script>
+  <script src="js/pages/conseils.js"></script>
+  <script src="js/pages/ai-assistant.js"></script>
+  <script src="js/pages/gamification.js"></script>
+  <script src="js/pages/profile.js"></script>
+  <script src="js/pages/marketplace.js"></script>
+  <script src="js/pages/about.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
